@@ -1,0 +1,62 @@
+---
+// Array of your top projects. This data structure makes it easy to manage.
+const featuredProjects = [
+  {
+    title: "Energy Profiling & Optimization at CERN-LHCb",
+    description: "Developed a C++ energy-profiling module in the ACTS framework, discovering the iterative Kalman Fitter to be 95% more efficient than the Global Chi-Square Fitter.",
+    tags: ["C++", "High-Performance Computing", "Data Analysis", "Profiling"],
+    link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
+  },
+  {
+    title: "Google Summer of Code - Quantum Algorithm Benchmarking",
+    description: "Architected a Python framework to benchmark classical (PyTorch) and quantum (PennyLane) algorithms, automating a 4-stage workflow for 25 million data points.",
+    tags: ["Python", "PyTorch", "PennyLane", "Quantum Computing", "Framework Design"],
+    link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
+  },
+  {
+    title: "High-Performance Time Series Database Engine",
+    description: "Engineered a low-level C++ storage engine with custom compression to maximize storage efficiency by 50%, achieving P99 latencies of 1.3ms (hot-cache).",
+    tags: ["C++", "Databases", "System Design", "Performance", "Docker"],
+    link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
+  },
+  {
+    title: "Distributed Fault-Tolerant Cache System",
+    description: "Designed a scalable, clustered caching microservice using Python's asyncio and gRPC, sustaining a peak throughput of 17,000 ops/sec on a 3-node cluster.",
+    tags: ["Python", "Distributed Systems", "gRPC", "Asyncio", "Fault Tolerance"],
+    link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
+  }
+];
+---
+
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">
+      Featured Projects
+    </h2>
+    <div class="flex flex-col gap-12">
+      {featuredProjects.map(project => (
+        <div class="bg-gray-800 rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-white mb-3">{project.title}</h3>
+          <p class="text-gray-300 mb-6">{project.description}</p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            {project.tags.map(tag => (
+              <span class="bg-indigo-600/50 text-indigo-200 text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+          <a href={project.link} target="_blank" class="text-indigo-300 font-semibold hover:underline">
+            View on GitHub &rarr;
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!--
+New Tailwind Classes:
+- `flex-col`: Stacks items vertically.
+- `gap-12`: Adds a gap between the project cards.
+- `transform hover:-translate-y-2 transition-transform duration-300`: A group of classes that creates a cool "lift-up" effect when you hover over a card.
+- `flex-wrap`: Allows the tag items to wrap to the next line if there isn't enough space.
+- `bg-indigo-600/50`: Sets the background color to indigo, but with 50% opacity.
+-->

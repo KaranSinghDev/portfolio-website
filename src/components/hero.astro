@@ -1,0 +1,43 @@
+---
+// No script needed
+---
+<section class="py-20 md:py-24">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+    
+    <!-- Image Column -->
+    <div class="w-full md:w-1/3 flex justify-center">
+      <img 
+        src="/profile-image.jpeg" 
+        alt="Karan Singh" 
+        class="w-48 h-48 md:w-64 md:h-64 object-contain rounded-full border-4 border-indigo-500 shadow-lg"
+      >
+    </div>
+
+    <!-- Text Column -->
+    <div class="w-full md:w-2/3 text-center md:text-left">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white">
+        Karan Singh
+      </h1>
+      <h2 class="text-2xl md:text-3xl font-light text-indigo-300 mt-2">
+        Research Software Engineer
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto md:mx-0 mt-6">
+        Building robust, efficient, and scalable software for complex scientific challenges. My expertise lies in high-throughput data pipelines and performance optimization in C++ and Python.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!--
+New Tailwind Classes:
+- `flex flex-col md:flex-row`: The container is a column on mobile (image stacked on top of text) but becomes a row on medium screens and up. This is for responsiveness.
+- `items-center`: Vertically aligns the image and the text block.
+- `gap-12`: Adds a large gap between the image and text columns.
+- `w-1/3`, `w-2/3`: Sets the width of the columns on desktop.
+- `rounded-full`: Makes the image a perfect circle.
+- `object-cover`: Ensures the image covers the circular shape without being stretched or distorted.
+- `border-4 border-indigo-500`: Adds a colored border that matches your resume button.
+- `shadow-lg`: Adds a nice drop shadow for depth.
+- `md:text-left`: Makes the text left-aligned on medium screens and up, overriding the default `text-center`.
+-->

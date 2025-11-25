@@ -1,0 +1,23 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="bg-gray-950 border-t border-gray-800 py-8 mt-20">
+  <div class="container mx-auto px-6 text-center text-gray-400">
+    <p class="mb-4">
+      &copy; {currentYear} Karan Singh. All rights reserved.
+    </p>
+    <div class="flex justify-center space-x-6">
+      <a href="https://github.com/KaranSinghDev" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+      <a href="https://www.linkedin.com/in/karansinghdev/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+      <a href="mailto:karansingh25822@gmail.com" class="hover:text-white transition-colors">Email</a>
+    </div>
+  </div>
+</footer>
+
+<!--
+New Tailwind Classes:
+- `bg-gray-950`: The darkest shade of gray for the footer background.
+- `border-t border-gray-800`: A 1px top border to separate it from the content above.
+- `mt-20`: A large top margin to push the footer down from the last section.
+- `&copy;`: The HTML entity for the copyright symbol.
+-->

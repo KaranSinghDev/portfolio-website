@@ -1,0 +1,36 @@
+---
+// This is the "component script" area. You can write JavaScript/TypeScript here.
+// For now, we'll leave it empty.
+---
+
+<header class="bg-gray-900 text-white p-6 md:p-8 border-b border-gray-700">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Left Side: Your Name -->
+    <div>
+      <a href="/" class="text-2xl font-bold hover:text-gray-300 transition-colors">
+        Karan Singh
+      </a>
+    </div>
+    
+    <!-- Right Side: Navigation Links -->
+    <nav class="hidden md:flex space-x-6 text-lg">
+      <a href="https://github.com/KaranSinghDev" target="_blank" class="hover:text-gray-300 transition-colors">GitHub</a>
+      <a href="https://www.linkedin.com/in/karansinghdev/" target="_blank" class="hover:text-gray-300 transition-colors">LinkedIn</a>
+      <a href="/blog" class="hover:text-gray-300 transition-colors">Blog</a>
+      <a href="/resume.pdf" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-md transition-colors">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 
+A quick guide to the Tailwind CSS classes we used:
+- `bg-gray-900 text-white`: Sets the background and text colors.
+- `p-6 md:p-8`: Sets padding (6 units on mobile, 8 units on medium screens and up).
+- `border-b border-gray-700`: Adds a 1px bottom border.
+- `container mx-auto`: Centers the content with a max-width.
+- `flex justify-between items-center`: The core of the layout. Makes it a flexbox, pushes children to opposite ends, and vertically aligns them in the middle.
+- `space-x-6`: Adds horizontal space between the nav links.
+- `hover:bg-indigo-500`: Changes the background color when you hover over the element.
+- `transition-colors`: Makes the color change smooth.
+- `hidden md:flex`: The navigation is hidden on small screens (`hidden`) and becomes a flexbox on medium screens and up (`md:flex`). This is for mobile responsiveness.
+-->
