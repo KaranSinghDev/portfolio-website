@@ -1,0 +1,86 @@
+---
+// --- SKILLS DATA ---
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    skills: ["C++", "Python", "SQL"],
+  },
+  {
+    title: "Backend & Databases",
+    skills: ["Docker", "Kubernetes", "Kafka", "Redis", "PostgreSQL", "MySQL", "FastAPI", "Elasticsearch"],
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: ["Linux", "AWS (EC2, S3, Lambda)", "Azure", "CI/CD", "GitHub Actions"],
+  },
+  {
+    title: "AI & Machine Learning",
+    skills: ["PyTorch", "Scikit-learn", "Pandas", "NumPy", "Transformers", "LangChain", "CUDA"],
+  },
+];
+---
+
+<section class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <!-- The two-column grid starts here -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
+      
+      <!-- ========== LEFT COLUMN: TECHNICAL SKILLS ========== -->
+      <div class="space-y-10">
+        <h2 class="text-3xl font-bold text-white text-center lg:text-left">Technical Skills</h2>
+        {skillCategories.map(category => (
+          <div>
+            <h3 class="text-xl font-semibold text-indigo-300 mb-4">{category.title}</h3>
+            <div class="flex flex-wrap gap-3">
+              {category.skills.map(skill => (
+                <span class="bg-gray-800 text-gray-300 text-base font-medium px-4 py-2 rounded-lg">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- ========== RIGHT COLUMN: PUBLICATIONS & LEADERSHIP ========== -->
+      <div class="space-y-10">
+        <h2 class="text-3xl font-bold text-white text-center lg:text-left">Publications & Leadership</h2>
+        
+        <!-- Publications Subsection -->
+        <div>
+          <h3 class="text-xl font-semibold text-indigo-300 mb-4 border-b border-gray-700 pb-2">Technical Research</h3>
+          <ul class="space-y-4">
+            <li class="text-gray-300 text-base">
+              <span class="font-semibold text-white">Sustainability studies of big data processing...</span>
+              <br>
+              <span class="text-gray-400">Co-authored poster at ACAT 2025.</span>
+            </li>
+            <li class="text-gray-300 text-base">
+              <span class="font-semibold text-white">Improvements on QAOA for Particle Trajectories...</span>
+              <br>
+              <span class="text-gray-400">Co-authored poster at ACAT 2025.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Leadership Subsection -->
+        <div>
+          <h3 class="text-xl font-semibold text-indigo-300 mb-4 border-b border-gray-700 pb-2">Leadership</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-300 text-base">
+            <li>AI/ML domain lead, mentoring 100+ students and organizing 15+ workshops.</li>
+            <li>Secured 3rd place at SRM Builds 5.0 & 6th place at Intel's AI Hackathon.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--
+Key Classes for the new layout:
+- `grid grid-cols-1 lg:grid-cols-2`: This is the most important part. On mobile (`grid-cols-1`), the columns stack vertically. On large screens (`lg:grid-cols-2`), they sit side-by-side.
+- `gap-x-16`: Adds a large horizontal gap between the two columns on large screens.
+- `max-w-7xl`: A wider container to give the two columns enough space to breathe.
+- `text-center lg:text-left`: The main titles ("Technical Skills", "Publications...") will be centered on mobile but left-aligned on desktop.
+-->

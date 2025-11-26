@@ -3,25 +3,25 @@
 const featuredProjects = [
   {
     title: "Energy Profiling & Optimization at CERN-LHCb",
-    description: "Developed a C++ energy-profiling module in the ACTS framework, discovering the iterative Kalman Fitter to be 95% more efficient than the Global Chi-Square Fitter.",
+    description: "I worked on analyzing the energy use of track-reconstruction software inside the ACTS C++ framework. I developed an energy-profiling module and used it to study the behavior of key fitting algorithms such as the Combinatorial Kalman Filter (CKF), Gaussian Sum Filter (GSF), and Runge–Kutta–based track propagation. This helped identify inefficiencies and provided clear insights to improve performance for LHCb and ATLAS workflows.",
     tags: ["C++", "High-Performance Computing", "Data Analysis", "Profiling"],
     link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
   },
   {
     title: "Google Summer of Code - Quantum Algorithm Benchmarking",
-    description: "Architected a Python framework to benchmark classical (PyTorch) and quantum (PennyLane) algorithms, automating a 4-stage workflow for 25 million data points.",
+    description: "I developed a Python framework that implements classical ML algorithms and simulates quantum ML algorithms on classical hardware. The goal was to estimate the energy use and performance researchers can expect when running the same processes on real quantum hardware, giving them a practical baseline before using actual quantum systems.",
     tags: ["Python", "PyTorch", "PennyLane", "Quantum Computing", "Framework Design"],
     link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
   },
   {
     title: "High-Performance Time Series Database Engine",
-    description: "Engineered a low-level C++ storage engine with custom compression to maximize storage efficiency by 50%, achieving P99 latencies of 1.3ms (hot-cache).",
+    description: "Seeing the limits of general-purpose databases for time-series workloads, I set out to build my own storage engine. I designed a C++17 system with custom compression and a log-structured, time-sharded architecture, benchmarking it on an Intel i7-12700H, 16 GB DDR4 RAM, and NVMe Gen4 SSD, where it achieved ~50% better storage efficiency and sub-millisecond query times on real datasets.",
     tags: ["C++", "Databases", "System Design", "Performance", "Docker"],
     link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
   },
   {
     title: "Distributed Fault-Tolerant Cache System",
-    description: "Designed a scalable, clustered caching microservice using Python's asyncio and gRPC, sustaining a peak throughput of 17,000 ops/sec on a 3-node cluster.",
+    description: "To understand how distributed systems achieve reliability at scale, I built a fault-tolerant key-value store from scratch. Using consistent hashing, N-way replication, and automated chaos testing, I validated the system on an Intel i7-12700H, 16 GB RAM, NVMe Gen4 SSD, where it sustained 17k GET ops/sec with zero data loss, even during simulated node failures.",
     tags: ["Python", "Distributed Systems", "gRPC", "Asyncio", "Fault Tolerance"],
     link: "https://github.com/KaranSinghDev" // Update with a more specific link if available
   }

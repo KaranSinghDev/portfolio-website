@@ -1,5 +1,5 @@
 ---
-// Array of skill categories. This makes it easy to add/remove skills later.
+// The data structure remains the same, making it easy to manage your skills.
 const skillCategories = [
   {
     title: "Programming Languages",
@@ -21,19 +21,21 @@ const skillCategories = [
 ---
 
 <section class="py-20 bg-gray-900">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-16">
       Technical Skills
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="space-y-10">
       {skillCategories.map(category => (
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+        <div>
           <h3 class="text-xl font-semibold text-indigo-300 mb-4">{category.title}</h3>
-          <ul class="space-y-2">
+          <div class="flex flex-wrap gap-3">
             {category.skills.map(skill => (
-              <li class="text-gray-300">{skill}</li>
+              <span class="bg-gray-800 text-gray-300 text-base font-medium px-4 py-2 rounded-lg">
+                {skill}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
     </div>
@@ -41,11 +43,10 @@ const skillCategories = [
 </section>
 
 <!--
-New Tailwind Classes & Concepts:
-- `bg-gray-900`: A slightly lighter shade of dark for the section background to create contrast.
-- `mb-12`: margin-bottom for spacing.
-- `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4`: This is the core of the layout. It creates a CSS Grid. On mobile, it's a single column (`grid-cols-1`). On medium screens, it becomes two columns (`md:grid-cols-2`), and on large screens, it's four columns (`lg:grid-cols-4`).
-- `gap-8`: Sets the spacing between grid items.
-- `rounded-lg shadow-md`: Styles for the individual skill cards.
-- { ... }: This is how you write JavaScript expressions and loops inside Astro's HTML-like syntax. We are looping through the `skillCategories` array to generate the cards dynamically.
+Key Changes:
+- Layout: We've removed the `grid` of cards and are now using a single-column layout with `space-y-10` to separate the categories.
+- Tags: Each skill is now a `<span>` element styled to look like a modern "tag" or "pill".
+- `flex flex-wrap`: This is the key to the tag cloud. It allows the skill tags in each category to line up horizontally and wrap to the next line if there isn't enough space.
+- `gap-3`: This adds a small, consistent space between each tag.
+- Styling: The tags have a subtle `bg-gray-800` background and a slightly larger font and padding (`text-base`, `px-4 py-2`) for better readability compared to the project tags.
 -->

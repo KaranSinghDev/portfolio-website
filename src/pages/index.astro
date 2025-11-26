@@ -2,18 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import Skills from '../components/Skills.astro';
+import About from '../components/About.astro';
 import Projects from '../components/Projects.astro';
-import Publications from '../components/Publications.astro';
+import SkillsAndPublications from '../components/SkillsAndPublications.astro'; // <-- 1. Import the new component
 ---
 
 <Layout title="Karan Singh | Research Software Engineer">
   <Header />
   <Hero />
-  <Skills />
-
-  <main>
-     <Projects />
-     <Publications /> <!-- <-- 2. Use the component -->
-  </main>
+  <About />
+  <Projects /> 
+  <SkillsAndPublications /> <!-- <-- 2. Use the new single component -->
 </Layout>
